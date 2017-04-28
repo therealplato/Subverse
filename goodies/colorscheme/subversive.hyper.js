@@ -1,0 +1,22 @@
+{
+    foregroundColor: '#dbf8d3', 
+    backgroundColor: '#182b3a', 
+    colors: { 
+      black: '#0b0b0b', 
+      red: '#dc8182', 
+      green: '#83dc80', 
+      yellow: '#dcda80', 
+      blue: '#8283da', 
+      magenta: '#db81da', 
+      cyan: '#82dcd9 ', 
+      white: '#a9a9a9 ', 
+      lightBlack: ' #808080', 
+      lightRed: ' #e2a7a7', 
+      lightGreen: ' #a8e1a6', 
+      lightYellow: ' #e2e0a6', 
+      lightBlue: ' #a7a8e0', 
+      lightMagenta: ' #e1a7e0', 
+      lightCyan: '#a7e1df ', 
+      lightWhite: '#efefef ',
+    },
+}

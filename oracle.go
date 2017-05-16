@@ -3,3 +3,5 @@
 // type Oracle interface {
 // 	Attest(facts ...interface{}) bool
 // }
+
+package subverse

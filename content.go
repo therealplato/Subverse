@@ -1,4 +1,4 @@
-package content
+package subverse
 
 // A Ref describes a handle that points at content
 type Ref interface {
@@ -8,25 +8,23 @@ type Ref interface {
 }
 
 type Content interface {
-	B() []byte
-	Meta() Metadata
+	Contents() []byte
 }
 
 type Metadata interface {
-	Content() Ref
-	B() []byte
+	Describing() Ref
+	Map() map[string]string
 }
 
-Type MetaContent interface{
+type MetaContent interface {
 	Metadata
 	Content
 }
 
-
 type ByteContent []byte
 
 func (b *ByteContent) B() []byte {
-	return []byte(b)
+	return []byte(*b)
 }
 
 func (b *ByteContent) Type() string {

@@ -4,7 +4,6 @@
           / ___/ / / / __ \ | / / _ \/ ___/ ___/ _ \
          (__  ) /_/ / /_/ / |/ /  __/ /  (__  )  __/
         /____/\____/_____/|___/\___/_/  /____/\___/
-```
 
 A decentralized, trust based system for communication and trade
 11.21.11
@@ -87,3 +86,4 @@ So people who find the mashup can find the authors
 As a mashup consumer
 I want the mashup to include the child content by reference
 So that I don't waste bandwidth re-downloading if I already have some of the child content
+```

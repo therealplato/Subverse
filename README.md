@@ -24,3 +24,9 @@ As someone who wants to communicate with some parties, without anyone/everyone l
 I need to publish text, voice, photo, video to a specific, limited audience
 And inform them of the information hygiene policy associated with the content
 So we can be private
+
+Use case: Science
+As a scientist who wants to learn and share truth
+I need somewhere to publish my findings to all interested parties
+So other scientists can validate or invalidate the truth of the findings
+I also need funding

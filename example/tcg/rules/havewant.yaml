@@ -1,0 +1,36 @@
+---
+name: protocol
+value: http
+
+---
+name: encoding
+values:
+  - utf8
+  - yaml
+
+---
+name: have/want list data model
+example:
+  owner: anonymous
+  have:
+    - name: Search For Azcanta
+      set: Ixalan
+      condition: mint
+      qty: 1
+  want:
+    - name: 15 card booster pack
+      set: Ixalan
+      condition: new
+      qty: 3
+
+---
+name:  have/want request 
+example:
+  requestor: anonymous
+  requestee: anonymous
+
+---
+name:  have/want response 
+examples:
+  - have/want list data model
+  - 401 authentication required

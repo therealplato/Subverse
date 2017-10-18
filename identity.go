@@ -9,12 +9,14 @@ type Contact interface {
 	ContactEndpoints() []string
 }
 
-// Anonymous is the identity of no one
-type Anonymous struct{}
+var Anonymous = &AnonymousIdentity{}
 
-func (i *Anonymous) Self() Identity {
+// AnonymousIdentity is the identity of no one
+type AnonymousIdentity struct{}
+
+func (i *AnonymousIdentity) Self() Identity {
 	return i
 }
-func (i *Anonymous) Is(Identity) bool {
+func (i *AnonymousIdentity) Is(Identity) bool {
 	return false
 }

@@ -81,3 +81,9 @@ type ByteContent []byte
 func (b *ByteContent) Bytes() []byte {
 	return []byte(*b)
 }
+
+// SignedContent is content plus some kind of signature
+type SignedContent struct {
+	Content   Content
+	Signature interface{}
+}

@@ -87,8 +87,8 @@ So I can make money
 
 (accomplished by [**openbazaar**](https://www.openbazaar.org/))
 
-As someone with information, goods or services to sell
-And ruleset governing trust
+As someone with information, goods or services to trade
+I need to trade within a ruleset governing trust
 So that I can find counterparties who won't fuck me
 
 #### Mashups

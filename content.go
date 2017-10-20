@@ -11,38 +11,47 @@ type Ref interface {
 	Content() Content
 }
 
-type RefMaker interface {
-	MakeRef([]byte) Ref
-}
+// type RefMaker interface {
+// 	MakeRef([]byte) Ref
+// }
 
+// Content is something that can become bytes
 type Content interface {
 	Bytes() []byte
 }
 
+// Metadata is key/values about a Ref
 type Metadata interface {
 	Describing() Ref
 	Map() map[string]string
 }
 
+// MetaContent is something with both Metadata and Content
 type MetaContent interface {
 	Metadata
 	Content
 }
 
+// NilContent is a placeholder
 type NilContent struct{}
 
+// Bytes returns nil
 func (c NilContent) Bytes() []byte {
 	return nil
 }
 
+// URIRef references a URI
 type URIRef struct {
 	URI   string
 	bytes []byte
 }
 
+// Hash is unimplemented
 func (r *URIRef) Hash() string {
 	return ""
 }
+
+// Content returns the ref's bytes or nil
 func (r *URIRef) Content() Content {
 	if r.bytes == nil {
 		return NilContent{}
@@ -50,6 +59,7 @@ func (r *URIRef) Content() Content {
 	bc := ByteContent(r.bytes)
 	return &bc
 }
+
 func (r *URIRef) populateContent() {
 	if r.bytes == nil {
 		resp, err := http.Get(r.URI)
@@ -64,8 +74,10 @@ func (r *URIRef) populateContent() {
 	}
 }
 
+// ByteContent is a blob
 type ByteContent []byte
 
+// Bytes is the blob
 func (b *ByteContent) Bytes() []byte {
 	return []byte(*b)
 }
